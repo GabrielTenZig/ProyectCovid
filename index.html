@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- ESTILOS GLOBALES -->
+    <link rel="stylesheet" href="css/variables.css">
+
+    <!-- ESTILOS PARA MOVIL-->
+    <link rel="stylesheet" href="css/mobile-styles/variables.css" media="(max-width: 800px)">
+    <link rel="stylesheet" href="css/index.css" media="(max-width: 800px)">
+    <link rel="stylesheet" href="css/mobile-styles/navigator.css" media="(max-width: 800px)">
+    <link rel="stylesheet" href="css/mobile-styles/dashboards.css" media="(max-width: 800px)">
+
+    <!-- ESTILOS PARA ESCRITORO -->
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
+    <title>Dash Covid by Tenzig</title>
+</head>
+<body>
+
+    <ul class="opciones">
+        <li>
+            <button id="check-pais">
+                <i class="fas fa-flag"></i>
+                <!-- A -->
+            </button>
+        </li>
+        <li>
+            <button id="check-global">
+                <i class="fas fa-globe-americas"></i>
+                <!-- B -->
+            </button>
+        </li>
+        <li>
+            <button id="check-about">
+                <i class="fas fa-info"></i>
+                <!-- C -->
+            </button>
+        </li>
+    </ul>
+
+
+    <!-- Dashboar Pais -->
+    <div class="dashboard dashboard-pais" id="dash-pais">
+        
+        <input class="dashboard-pais__input" type="text" name="v_pais-selected" id="v_pais-select" placeholder="Busca tu pais aquí">
+        
+        <p id="v_nombre-pais">Nombre del Pais</p>
+
+        <div class="dashboard-pais__informacion">
+            
+        </div>
+
+    </div>
+
+    <!-- Dashboard Global -->
+    <div class="dashboard dashboard-global" id="dash-global">
+        Aqui va la info sobre el COVID a nivel global
+    </div>
+
+    <!-- Dashboard About -->
+    <div class="dashboard dashboard-about" id="dash-about">
+        Aqui va la informacion sobre este proyecto
+    </div>
+    
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

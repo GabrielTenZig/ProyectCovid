@@ -1,0 +1,9 @@
+:root {
+    --backcolor: #333;
+
+    --shadow-light: #4d4d4d;
+    --shadow-dark: #1c1c1c;
+
+    --font-title: Helvetica;
+    --font-content: Corbel;
+}
