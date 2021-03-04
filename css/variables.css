@@ -1,9 +1,41 @@
 :root {
+    
+    /* DARK VERSION */
     --backcolor: #333;
 
     --shadow-light: #4d4d4d;
     --shadow-dark: #1c1c1c;
 
     --font-title: Helvetica;
-    --font-content: Corbel;
+    --font-content: Helvetica;
+
+    --boxshadow-small: -4px -4px 9px var(--shadow-light), 4px 4px 9px var(--shadow-dark);
+
+
+    /* LIGHT VERSION */
+    --backcolor: #ececec;
+    --second-backcolor: #cccccc;
+
+    --shadow-light: #ffffff;
+    --shadow-dark: #cecece;
+
+    --color: #313131;
+    --second-color: #4a4a4a;
+
+    --font-title: Helvetica;
+    --font-title-size: 1.7em;
+    --font-title-color: #515151;
+    --font-title-weight: bold;
+    
+
+    --font-content: Helvetica;
+    --font-content-size: 0.8em; 
+    --font-content-color: #515151;
+    --font-content-weight: light;
+
+    --font-input: Corbel;
+    
+
+    --spinner-color: #333;
+
 }
