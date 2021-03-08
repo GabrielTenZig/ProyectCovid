@@ -36,10 +36,12 @@ export const getLastestDataCovidFromCountry = async (nameContry) => {
 }
 
 export const getPopulationOf = (nameCountry) => {
-    console.log("Reciviendo name:: ", nameCountry)
+    // console.log("Reciviendo name:: ", nameCountry)
+    nameCountry = nameCountry.toLowerCase()
+
     for(let country of contries) {
         if(country.name === nameCountry) {
-            console.log("Devolviendo population:: ", country.population)
+            // console.log("Devolviendo population:: ", country.population)
             return country.population
         }
     }
