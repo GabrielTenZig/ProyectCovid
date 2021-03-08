@@ -57,6 +57,7 @@
     border-radius: 50px;
     border: none;
     outline: none;
+    /* color: #454545; */
 }
 
 .dashboard-pais__input:active {
