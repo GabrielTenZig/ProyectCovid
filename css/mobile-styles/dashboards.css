@@ -12,6 +12,9 @@
     transition: 0.4s;
     overflow: scroll;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .title{
@@ -37,11 +40,6 @@
     z-index: 2;
     top: 0px;
     left: -100%;
-
-    /* background-color: #181818; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .dashboard-pais__input {
@@ -49,10 +47,11 @@
     font-family: var(--font-input);
     font-size: var(--font-size-input);
     display: block;
-    width: 100%;
-    height: 2.5em;
+    box-sizing: border-box; 
+    width: 95%;
+    min-height: 2em;
     text-align: center;
-
+    
     margin-bottom: 1.5em;
     border-radius: 50px;
     border: none;
@@ -61,22 +60,18 @@
 }
 
 .dashboard-pais__input:active {
-    background-color: none;
+    filter: brightness(1.05);
 }
 
 .dashboard-pais__informacion {
-    /* background-color: rgb(101, 101, 101); */
     box-shadow: var(--boxshadow-small);
     padding: 1em 2em 1em 2em;
+    box-sizing: border-box;
+    padding-bottom: 2em;
     border-radius: 3px;
-    width: 90%;
-    /* min-height: 3em; */
-    height: auto;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    width: 95%;
+    /* height: 400px; */
+    /* min-height: 60vh; */
 }
 
 
@@ -87,6 +82,7 @@
     z-index: 1;
     top: 0px;
 }
+
 
 /* ####################################################### */
 /*                      Dashboard About                    */

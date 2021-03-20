@@ -76,20 +76,18 @@ loaderDashboardPais.style.display = 'none'
 // BUSCANDO PAIS...
 searchBoxPais.addEventListener('keydown', async (e) => {
     if (e.key != "Enter") return
+    if (!searchBoxPais.value) return
 
     titleNombreDelPais.textContent = "Nombre del país"
     dashboardCountryInformation.innerHTML = loaderDashboardPais.outerHTML
     loaderDashboardPais = document.getElementById('loader')
     loaderDashboardPais.style.display = 'block'
 
-    // Recivimos una respuest y limpiamos la interfaz
+    // Recivimos una respuesta y limpiamos la interfaz
     const nameCountryInputedByUser = searchBoxPais.value
     const data = await getLastestDataCovidFromCountry( nameCountryInputedByUser )
     searchBoxPais.value = ''
     loaderDashboardPais.style.display = 'none'
-
-    
-    console.log("Llegó:: ", data)
     
     // Verificamos si ocurrió un error
     if(data.messageError) {
@@ -97,8 +95,7 @@ searchBoxPais.addEventListener('keydown', async (e) => {
 
     // Verificamos si nos llego un array de coincidencias
     } else if(data.length) {
-        dashboardCountryInformation.innerHTML = `<p>Obtuvimos estas coincidencias:<p>`
-        console.log("ashdgfpbsaidug")
+        dashboardCountryInformation.innerHTML = `<p>Quizas quisiste decir:<p>`
         let coincidencesToAdd = ""
 
         coincidencesToAdd += `<p style="color: gray">`
@@ -110,8 +107,6 @@ searchBoxPais.addEventListener('keydown', async (e) => {
 
     // Si no, pues nos llego la data del pais buscado
     } else {
-        // const lastDataCovidFromContry = data[data.length-1]
-        console.log("Data:: ", data)
         titleNombreDelPais.textContent = `${data.Country}`
         dashboardCountryInformation.innerHTML = `<p style="font-size:11px">Poblacion aproximada de ${data.Country} durante la pandemia: <b style="font-size: 12px">${Intl.NumberFormat("es-MX").format(getPopulationOf(nameCountryInputedByUser))}</b></p>`
         dashboardCountryInformation.innerHTML += separator()
@@ -123,31 +118,9 @@ searchBoxPais.addEventListener('keydown', async (e) => {
     }
 
 
-    // if(data.messageError) {
-    //     dashboardCountryInformation.innerHTML = `<p">${data.messageError}<p>`
-
-    // } else if(data.nameCountry && data.records) {
-    //     titleNombreDelPais.textContent = data.nameCountry
-
-    //     let datosCountry = await data.records[data.records.length-1]
-    //     loaderDashboardPais.style.display = 'none'
-
-    //     // dashboardCountryInformation.innerHTML = `<p>Casos Confirmados: ${ new Intl.NumberFormat("es-MX").format(datosCountry["Confirmed"]) } </p>`
-    //     dashboardCountryInformation.innerHTML = datosModule(await getPoblacionTotalDeMexico() || 130273923,datosCountry["Confirmed"],datosCountry["Deaths"],datosCountry["Recovered"],datosCountry["Date"])
-        
-    //     // dashboardCountryInformation.innerHTML += `<p>Numero de muertes: ${ new Intl.NumberFormat("es-MX").format(datosCountry["Deaths"]) }</p>`
-    //     // dashboardCountryInformation.innerHTML += `<p>Casos recuperados: ${ new Intl.NumberFormat("es-MX").format(datosCountry["Recovered"]) }</p>`
-    //     // dashboardCountryInformation.innerHTML += `<p>Actualizado al ${ datosCountry["Date"] }</p>`
-        
-    // } 
-
-
 })
 
 document.addEventListener( 'DOMContentLoaded', async () => {
-
     console.log("DOM cargado completamnete")
-    console.log(  )
-
 } )
 

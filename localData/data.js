@@ -457,107 +457,112 @@ export const contries = [
     {
         name: "sudan",
         population: 44437070,
-        slug: "sin_nombre"
+        slug: "sudan"
     },
     {
         name: "etiopia",
         population: 116917126,
-        slug: "sin_nombre"
+        slug: "ethiopia"
     },
     {
         name: "somalia",
         population: 16106065,
-        slug: "sin_nombre"
+        slug: "somalia"
     },
     {
         name: "camerun",
         population: 26987332,
-        slug: "sin_nombre"
+        slug: "cameroon"
     },
     {
         name: "angola",
         population: 33603799,
-        slug: "sin_nombre"
+        slug: "angola"
     },
     {
         name: "republica democratica del congo",
         population: 91474559,
-        slug: "sin_nombre"
+        slug: "congo-kinshasa"
+    },
+    {
+        name: "congo",
+        population: 91474559,
+        slug: "congo-brazzaville"
     },
     {
         name: "zambia",
         population: 18774969,
-        slug: "sin_nombre"
+        slug: "zambia"
     },
     {
         name: "madagascar",
         population: 28229804,
-        slug: "sin_nombre"
+        slug: "madagascar"
     },
     {
         name: "tanzania",
         population: 61066176,
-        slug: "sin_nombre"
+        slug: "tanzania"
     },
     {
         name: "kenia",
         population: 54836777,
-        slug: "sin_nombre"
+        slug: "kenya"
     },
     {
         name: "eritrea",
         population: 3611962,
-        slug: "sin_nombre"
+        slug: "eritrea"
     },
     {
         name: "kazajistan",
         population: 19004889,
-        slug: "sin_nombre"
+        slug: "kazakhstan"
     },
     {
         name: "pakistan",
         population: 224158087,
-        slug: "sin_nombre"
+        slug: "pakistan"
     },
     {
         name: "afganistan",
         population: 39857708,
-        slug: "sin_nombre"
+        slug: "afghanistan"
     },
     {
         name: "mongolia",
         population: 3318398,
-        slug: "sin_nombre"
+        slug: "mongolia"
     },
     {
         name: "nepal",
         population: 29275930,
-        slug: "sin_nombre"
+        slug: "nepal"
     },
     {
         name: "butan",
         population: 780566,
-        slug: "sin_nombre"
+        slug: "bhutan"
     },
     {
         name: "myanmar",
         population: 54750656,
-        slug: "sin_nombre"
+        slug: "myanmar"
     },
     {
         name: "camboya",
         population: 16920520,
-        slug: "sin_nombre"
+        slug: "cambodia"
     },
     {
         name: "filipinas",
         population: 110878035,
-        slug: "sin_nombre"
+        slug: "philippines"
     },
     {
         name: "nueva zelanda",
         population: 4843226,
-        slug: "sin_nombre"
+        slug: "new-zealand"
     }
 ]
 

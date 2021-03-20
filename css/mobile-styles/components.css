@@ -1,0 +1,19 @@
+.bar {
+    background-color: #8e8e8e;
+    width: auto;
+    height: 1em;
+
+    overflow: hidden;
+
+    border-radius: 0.8em;
+    position: relative;
+}
+
+.bar__loaded {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: #1556d8;
+}

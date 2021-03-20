@@ -1,22 +1,16 @@
 import { getBySlugLastRecord } from '../apis/apiCovid.js'
-import { contries, months } from './data.js'
+import { contries } from './data.js'
 
 export const getLastestDataCovidFromCountry = async (nameContry) => {
     if(!nameContry) return undefined
-    console.log("Antes era::::: ", nameContry)
     nameContry = nameContry.toLowerCase()
-    console.log("Ahora es::::: ", nameContry)
 
     let coincidences = []
 
     // Buscamos concidencias del nombreContry vesus los nombres de paises
-    console.log("Verificando: ", nameContry)
     for(let contry of contries) {
         if (contry.name.includes(nameContry)) {
-            console.log("Coincidio con: ", contry.name)
             coincidences.push(contry)
-        } else {
-            console.log("No coincidio con: ", contry.name)
         }
     }
 
