@@ -7,7 +7,7 @@
     position: fixed;
     width: 100vw;
     height: 8vh;
-    top: calc(100vh - var(--height-options-bar));
+    top: calc(100vh - (var(--height-options-bar)*2));
 
     display: flex;
     justify-content: space-evenly;

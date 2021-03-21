@@ -1,4 +1,4 @@
-import { getLastestDataCovidFromCountry, getPopulationOf } from './localData/accesToData.js'
+import { getDataOfCountry, getPopulationOf } from './localData/accesToData.js'
 import { confirmed, recovered, deaths, separator } from './components/components.js'
 
 
@@ -85,10 +85,13 @@ searchBoxPais.addEventListener('keydown', async (e) => {
 
     // Recivimos una respuesta y limpiamos la interfaz
     const nameCountryInputedByUser = searchBoxPais.value
-    const data = await getLastestDataCovidFromCountry( nameCountryInputedByUser )
+    const data = await getDataOfCountry( nameCountryInputedByUser)
+    console.log("Recibi: ", data)
+
     searchBoxPais.value = ''
     loaderDashboardPais.style.display = 'none'
     
+
     // Verificamos si ocurrió un error
     if(data.messageError) {
         dashboardCountryInformation.innerHTML = `<p>${data.messageError}<p>`
@@ -107,14 +110,15 @@ searchBoxPais.addEventListener('keydown', async (e) => {
 
     // Si no, pues nos llego la data del pais buscado
     } else {
-        titleNombreDelPais.textContent = `${data.Country}`
-        dashboardCountryInformation.innerHTML = `<p style="font-size:11px">Poblacion aproximada de ${data.Country} durante la pandemia: <b style="font-size: 12px">${Intl.NumberFormat("es-MX").format(getPopulationOf(nameCountryInputedByUser))}</b></p>`
+        const nameCountry_ = data.name[0].toUpperCase() + data.name.slice(1)
+        titleNombreDelPais.textContent = `${nameCountry_}`
+        dashboardCountryInformation.innerHTML = `<p style="font-size:11px">Poblacion aproximada de ${nameCountry_} durante la pandemia: <b style="font-size: 12px">${Intl.NumberFormat("es-MX").format(getPopulationOf(nameCountryInputedByUser))}</b></p>`
         dashboardCountryInformation.innerHTML += separator()
-        dashboardCountryInformation.innerHTML += confirmed(getPopulationOf(nameCountryInputedByUser),data["Confirmed"],data["Deaths"],data["Recovered"],data["Date"])
+        dashboardCountryInformation.innerHTML += confirmed(getPopulationOf(nameCountry_),data["Confirmed"],data["Deaths"],data["Recovered"],data["Date"])
         dashboardCountryInformation.innerHTML += separator()
-        dashboardCountryInformation.innerHTML += recovered(getPopulationOf(nameCountryInputedByUser), data["Confirmed"],data["Deaths"],data["Recovered"],data["Date"])
+        dashboardCountryInformation.innerHTML += recovered(getPopulationOf(nameCountry_), data["Confirmed"],data["Deaths"],data["Recovered"],data["Date"])
         dashboardCountryInformation.innerHTML += separator()
-        dashboardCountryInformation.innerHTML += deaths(getPopulationOf(nameCountryInputedByUser), data["Confirmed"],data["Deaths"],data["Recovered"],data["Date"])
+        dashboardCountryInformation.innerHTML += deaths(getPopulationOf(nameCountry_), data["Confirmed"],data["Deaths"],data["Recovered"],data["Date"])
     }
 
 

@@ -1,7 +1,7 @@
 import { getBySlugLastRecord } from '../apis/apiCovid.js'
 import { contries } from './data.js'
 
-export const getLastestDataCovidFromCountry = async (nameContry) => {
+export const getDataOfCountry = async (nameContry) => {
     if(!nameContry) return undefined
     nameContry = nameContry.toLowerCase()
 
@@ -21,7 +21,10 @@ export const getLastestDataCovidFromCountry = async (nameContry) => {
         }
 
     } else if(coincidences.length == 1) {   
-        let data = await getBySlugLastRecord(coincidences[0].slug)
+        const data = {
+            ...coincidences[0],
+            ...await getBySlugLastRecord(coincidences[0].slug)
+        }
         return data
 
     } else {
@@ -35,7 +38,7 @@ export const getPopulationOf = (nameCountry) => {
 
     for(let country of contries) {
         if(country.name === nameCountry) {
-            // console.log("Devolviendo population:: ", country.population)
+            console.log("Devolviendo population:: ", country.population)
             return country.population
         }
     }
