@@ -2,6 +2,10 @@
 Todos los creditos de este spinner a @lukehaas (Nombre de usuario en Twitter)
 El link de su cuenta twitter: https://twitter.com/lukehaas
 */
+.loader-content {
+  height: 300px;
+}
+
 
 .loader {
   color: #ffffff;

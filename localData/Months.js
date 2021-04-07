@@ -1,4 +1,4 @@
-export default months = {
+export const months = {
     0: "Enero",
     1: "Febrero",
     2: "Marzo",

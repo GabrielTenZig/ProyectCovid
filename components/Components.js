@@ -1,7 +1,7 @@
 import { barCharge } from './BarCharge.js'
 
 
-const confirmed =  (pobalcionTotal, numConfirmados, numMuertos, numRecuperados, fechaActualizacion) => {
+const confirmed =  (pobalcionTotal, numConfirmados) => {
 
     let porcentageConfirmados = ((numConfirmados * 100) / pobalcionTotal).toFixed(2)
     return `\
@@ -10,11 +10,10 @@ const confirmed =  (pobalcionTotal, numConfirmados, numMuertos, numRecuperados, 
         <p style="font-size: 12px; color: gray;"> <b>${ Intl.NumberFormat("es-MX").format(numConfirmados) }</b> / ${Intl.NumberFormat("es-MX").format(pobalcionTotal)}</p> \
         ${barCharge(porcentageConfirmados)}
         <p style="text-align: center;"> ${porcentageConfirmados} % </p> \
-        // Agregar Fecha de los datos
     </article>`
 }
 
-const recovered =  (pobalcionTotal, numConfirmados, numMuertos, numRecuperados, fechaActualizacion) => {
+const recovered =  (pobalcionTotal, numRecuperados) => {
 
     let porcentageRecuperados = ((numRecuperados * 100) / pobalcionTotal).toFixed(2)
     return `\
@@ -28,7 +27,7 @@ const recovered =  (pobalcionTotal, numConfirmados, numMuertos, numRecuperados, 
     `
 }
 
-const deaths =  (pobalcionTotal, numConfirmados, numMuertos, numRecuperados, fechaActualizacion) => {
+const deaths =  (pobalcionTotal, numMuertos) => {
 
     let porcentageMuertes = ((numMuertos * 100) / pobalcionTotal).toFixed(2)
     return `\

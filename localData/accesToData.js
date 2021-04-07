@@ -1,19 +1,28 @@
-import { getBySlugLastRecord } from '../apis/apiCovid.js'
+import { getBySlugAndProvince, getBySlugLastRecord } from '../apis/apiCovid.js'
 import { contries } from './Contries.js'
-
+import { isEmpty } from './../tenzigLibrary/arrays.js'
 
 const getDataOfCountry = async (nameContry) => {
     if(!nameContry) return undefined
-    nameContry = nameContry.toLowerCase()
+    // nameContry = nameContry.toLowerCase()
+    // if ( !contries.filter( pais => pais.name === nameContry ) ) ()
 
-    let coincidences = []
+    const paisesQueCoinciden = contries.filter(pais => pais.name === nameContry)
+    
+    return (isEmpty(paisesQueCoinciden))?
+        ({messageError: `No hay coincidencias con los datos de busqueda.<br><b style=";">Por favor, introduce un nombre de país valido y reintentalo.</b>`})
+        : getBySlugLastRecord( paisesQueCoinciden[0].slug )
+
+    // let coincidences = []
 
     // Buscamos concidencias del nombreContry vesus los nombres de paises
-    for(let contry of contries) {
-        if (contry.name.includes(nameContry)) {
-            coincidences.push(contry)
-        }
-    }
+    // for(let contry of contries) {
+    //     if (contry.name.includes(nameContry)) {
+    //         coincidences.push(contry)
+    //     }
+    // }
+
+
 
     if(coincidences.length == 0) {
         return {
@@ -33,15 +42,10 @@ const getDataOfCountry = async (nameContry) => {
 }
 
 const getPopulationOf = (nameCountry) => {
-    nameCountry = nameCountry.toLowerCase()
+    if (!nameCountry) return undefined
+    const paisesQueCoinciden = contries.filter( pais => pais.name === nameCountry )
 
-    for(let country of contries) {
-        if(country.name === nameCountry) {
-            console.log("Devolviendo population:: ", country.population)
-            return country.population
-        }
-    }
-
+    return (isEmpty(paisesQueCoinciden))? undefined : paisesQueCoinciden[0].population
 }
 
 export { getDataOfCountry, getPopulationOf }

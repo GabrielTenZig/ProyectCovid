@@ -1,566 +1,566 @@
 export const contries = [
     {
-      name: "francia",
+      name: "Francia",
       population: 68011000,
       slug: "france"
     },
     {
-        name: "estados unidos de america",
+        name: "Estados unidos de america",
         population: 332959083,
         slug: "united-states"
     },
     { 
-        name: "china",
+        name: "China",
         population: 1445275457,
         slug: "china"
     },
     {
-        name: "italia",
+        name: "Italia",
         population: 60555941,
         slug: "italy"
     },
     {
-        name: "albania",
+        name: "Albania",
         population:  2845955,
         slug: "albania"
     },
     {
-        name: "reino unido",
+        name: "Reino unido",
         population: 68208556,
         slug: "united-kingdom"
     },
     {
-        name: "alemania",
+        name: "Alemania",
         population: 83713081,
         slug: "germany"
     },
     {
-        name: "ucrania",
+        name: "Ucrania",
         population: 83713081,
         slug: "ukraine"
     },
     {
-        name: "turquia",
+        name: "Turquia",
         population: 83713081,
         slug: "turkey"
     },
     {
-        name: "mexico",
+        name: "México",
         population: 130321245,
         slug: "mexico"
     },
     {
-        name: "malasia",
+        name: "Malasia",
         population: 32731747,
         slug: "malaysia"
     },
     {
-        name: "austria",
+        name: "Austria",
         population: 9018860,
         slug: "austria"
     },
     {
-        name: "rusia",
+        name: "Rusia",
         population: 145973811,
         slug: "russia"
     },
     {
-        name: "canada",
+        name: "Canada",
         population: 38034765,
         slug: "canada"
     },
     {
-        name: "hong kong",
+        name: "Hong kong",
         population: 7539053,
         slug: "hong-kong-sar-china"
     },
     {
-        name: "grecia",
+        name: "Grecia",
         population: 10398717,
         slug: "greece"
     },
     {
-        name: "macedonia",
+        name: "Macedonia",
         population: 2087210,
         slug: "macedonia"
     },
     {
-        name: "polonia",
+        name: "Polonia",
         population: 37875531,
         slug: "poland"
     },
     {
-        name: "tailandia",
+        name: "Tailandia",
         population: 70021955,
         slug: "thailand"
     },
     {
-        name: "macao",
+        name: "Macao",
         population: 659260,
         slug: "macao-sar-china"
     },
     {
-        name: "portugal",
+        name: "Portugal",
         population: 10157575,
         slug: "portugal"
     },
     {
-        name: "arabia saudita",
+        name: "Arabia saudita",
         population: 35484238,
         slug: "saudi-arabia"
     },
     {
-        name: "paises bajos",
+        name: "Paises bajos",
         population: 17186261,
         slug: "netherlands"
     },
     {
-        name: "egipto",
+        name: "Egipto",
         population: 103971446,
         slug: "egypt"
     },
     {
-        name: "croacia",
+        name: "Croacia",
         population: 4100467,
         slug: "croatia"
     },
     {
-        name: "sudafrica",
+        name: "Sudafrica",
         population: 59684624,
         slug: "south-africa"
     },
     {
-        name: "hungria",
+        name: "Hungria",
         population: 9636017,
         slug: "hungary"
     },
     {
-        name: "suiza",
+        name: "Suiza",
         population: 8741007,
         slug: "switzerland"
     },
     {
-        name: "japon",
+        name: "Japon",
         population: 126491898,
         slug: "japan"
     },
     {
-        name: "singapur",
+        name: "Singapur",
         population: 5962287,
         slug: "singapore"
     },
     {
-        name: "irlanda",
+        name: "Irlanda",
         population: 4927963,
         slug: "ireland"
     },
     {
-        name: "marruecos",
+        name: "Marruecos",
         population: 37281948,
         slug: "morocco"
     },
     {
-        name: "emiratos arabes unidos",
+        name: "Emiratos arabes unidos",
         population: 10050085,
         slug: "nited-arab-emirates"
     },
     {
-        name: "belgica",
+        name: "Belgica",
         population: 11654978,
         slug: "belgium"
     },
     {
-        name: "tunez",
+        name: "Tunez",
         population: 11912124,
         slug: "tunisia"
     },
     {
-        name: "republica checa - chequia",
+        name: "Republica checa - chequia",
         population: 10707819,
         slug: "sin_noczech-republicmbre"
     },
     {
-        name: "corea del norte",
+        name: "Corea del norte",
         population: 25882361,
         slug: "korea-north"
     },
     {
-        name: "corea del sur",
+        name: "Corea del sur",
         population: 51538766,
         slug: "korea-south"
     },
     {
-        name: "indonesia",
+        name: "Indonesia",
         population: 276176374,
         slug: "indonesia"
     },
     {
-        name: "suecia",
+        name: "Suecia",
         population: 10166106,
         slug: "sweden"
     },
     {
-        name: "bulgaria",
+        name: "Bulgaria",
         population: 6916316,
         slug: "bulgaria"
     },
     {
-        name: "australia",
+        name: "Australia",
         population: 25819977,
         slug: "australia"
     },
     {
-        name: "brasil",
+        name: "Brasil",
         population: 214074405,
         slug: "brazil"
     },
     {
-        name: "india",
+        name: "India",
         population: 1393582963,
         slug: "india"
     },
     {
-        name: "dinamarca",
+        name: "Dinamarca",
         population: 5810692,
         slug: "denmark"
     },
     {
-        name: "argentina",
+        name: "Argentina",
         population: 45537904,
         slug: "argentina"
     },
     {
-        name: "barein - bahrein",
+        name: "Barein - bahrein",
         population: 1706127,
         slug: "bahrain"
     },
     {
-        name: "vietnam",
+        name: "Vietnam",
         population: 98178980,
         slug: "vietnam"
     },
     {
-        name: "republica dominicana",
+        name: "Republica dominicana",
         population: 10950381,
         slug: "dominican-republic"
     },
     {
-        name: "noruega",
+        name: "Noruega",
         population: 5480577,
         slug: "norway"
     },
     {
-        name: "taiwan",
+        name: "Taiwan",
         population: 23852730,
         slug: "taiwan"
     },
     {
-        name: "puerto rico",
+        name: "Puerto rico",
         population: 2892061,
         slug: "puerto-rico"
     },
     {
-        name: "cuba",
+        name: "Cuba",
         population: 11349189,
         slug: "cuba"
     },
     {
-        name: "guatemala",
+        name: "Guatemala",
         population: 18182721,
         slug: "guatemala"
     },
     {
-        name: "honduras",
+        name: "Honduras",
         population: 9995385,
         slug: "honduras"
     },
     {
-        name: "nicaragua",
+        name: "Nicaragua",
         population: 6675465,
         slug: "nicaragua"
     },
     {
-        name: "costa rica",
+        name: "Costa rica",
         population: 6675465,
         slug: "costa-rica"
     },
     {
-        name: "panama",
+        name: "Panama",
         population: 4363209,
         slug: "panama"
     },
     {
-        name: "ecuador",
+        name: "Ecuador",
         population: 17829674,
         slug: "ecuador"
     },
     {
-        name: "colombia",
+        name: "Colombia",
         population: 51196389,
         slug: "colombia"
     },
     {
-        name: "venezuela",
+        name: "Venezuela",
         population: 28946336,
         slug: "venezuela"
     },
     {
-        name: "guyana",
+        name: "Guyana",
         population: 788005,
         slug: "guyana"
     },
     {
-        name: "peru",
+        name: "Peru",
         population: 33250416,
         slug: "peru"
     },
     {
-        name: "bolivia",
+        name: "Bolivia",
         population: 11806592,
         slug: "bolivia"
     },
     {
-        name: "surinam",
+        name: "Surinam",
         population: 590439,
         slug: "suriname"
     },
     {
-        name: "paraguay",
+        name: "Paraguay",
         population: 7200230,
         slug: "paraguay"
     },
     {
-        name: "chile",
+        name: "Chile",
         population: 19273383,
         slug: "chile"
     },
     {
-        name: "uruguay",
+        name: "Uruguay",
         population: 3481448,
         slug: "uruguay"
     },
     {
-        name: "groenlandia",
+        name: "Groenlandia",
         population: 56749,
         slug: "greenland"
     },
     {
-        name: "islandia",
+        name: "Islandia",
         population: 342960,
         slug: "iceland"
     },
     {
-        name: "finlandia",
+        name: "Finlandia",
         population: 5568920,
         slug: "finland"
     },
     {
-        name: "estonia",
+        name: "Estonia",
         population: 1321505,
         slug: "estonia"
     },
     {
-        name: "letonia",
+        name: "Letonia",
         population: 1870145,
         slug: "latvia"
     },
     {
-        name: "lituania",
+        name: "Lituania",
         population: 2688568,
         slug: "lithuania"
     },
     {
-        name: "eslovaquia",
+        name: "Eslovaquia",
         population: 5462885,
         slug: "slovakia"
     },
     {
-        name: "serbia",
+        name: "Serbia",
         population: 8707047,
         slug: "serbia"
     },
     {
-        name: "bielorrusia",
+        name: "Bielorrusia",
         population: 9451745,
         slug: "belarus"
     },
     {
-        name: "rumania",
+        name: "Rumania",
         population: 19121751,
         slug: "romania"
     },
     {
-        name: "moldavia",
+        name: "Moldavia",
         population: 2682000,
         slug: "moldova"
     },
     {
-        name: "georgia",
+        name: "Georgia",
         population: 3936142,
         slug: "georgia"
     },
     {
-        name: "armenia",
+        name: "Armenia",
         population: 2973120,
         slug: "armenia"
     },
     {
-        name: "azerbaiyan",
+        name: "Azerbaiyan",
         population: 10258513,
         slug: "azerbaijan"
     },
     {
-        name: "siria",
+        name: "Siria",
         population: 16828615,
         slug: "syria"
     },
     {
-        name: "chipre",
+        name: "Chipre",
         population: 1218354,
         slug: "cyprus"
     },
     {
-        name: "libano",
+        name: "Libano",
         population: 7321881,
         slug: "lebanon"
     },
     {
-        name: "irak",
+        name: "Irak",
         population: 41317834,
         slug: "iraq"
     },
     {
-        name: "iran",
+        name: "Iran",
         population: 84699097,
         slug: "iran"
     },
     {
-        name: "libia",
+        name: "Libia",
         population: 6827831,
         slug: "libya"
     },
     {
-        name: "argelia",
+        name: "Argelia",
         population: 44436454,
         slug: "algeria"
     },
     {
-        name: "mali",
+        name: "Mali",
         population: 20655635,
         slug: "mali"
     },
     {
-        name: "niger",
+        name: "Niger",
         population: 24879616,
         slug: "niger"
     },
     {
-        name: "sudan",
+        name: "Sudan",
         population: 44437070,
         slug: "sudan"
     },
     {
-        name: "etiopia",
+        name: "Etiopia",
         population: 116917126,
         slug: "ethiopia"
     },
     {
-        name: "somalia",
+        name: "Somalia",
         population: 16106065,
         slug: "somalia"
     },
     {
-        name: "camerun",
+        name: "Camerun",
         population: 26987332,
         slug: "cameroon"
     },
     {
-        name: "angola",
+        name: "Angola",
         population: 33603799,
         slug: "angola"
     },
     {
-        name: "republica democratica del congo",
+        name: "Republica democratica del congo",
         population: 91474559,
         slug: "congo-kinshasa"
     },
     {
-        name: "congo",
+        name: "Congo",
         population: 91474559,
         slug: "congo-brazzaville"
     },
     {
-        name: "zambia",
+        name: "Zambia",
         population: 18774969,
         slug: "zambia"
     },
     {
-        name: "madagascar",
+        name: "Madagascar",
         population: 28229804,
         slug: "madagascar"
     },
     {
-        name: "tanzania",
+        name: "Tanzania",
         population: 61066176,
         slug: "tanzania"
     },
     {
-        name: "kenia",
+        name: "Kenia",
         population: 54836777,
         slug: "kenya"
     },
     {
-        name: "eritrea",
+        name: "Eritrea",
         population: 3611962,
         slug: "eritrea"
     },
     {
-        name: "kazajistan",
+        name: "Kazajistan",
         population: 19004889,
         slug: "kazakhstan"
     },
     {
-        name: "pakistan",
+        name: "Pakistan",
         population: 224158087,
         slug: "pakistan"
     },
     {
-        name: "afganistan",
+        name: "Afganistan",
         population: 39857708,
         slug: "afghanistan"
     },
     {
-        name: "mongolia",
+        name: "Mongolia",
         population: 3318398,
         slug: "mongolia"
     },
     {
-        name: "nepal",
+        name: "Nepal",
         population: 29275930,
         slug: "nepal"
     },
     {
-        name: "butan",
+        name: "Butan",
         population: 780566,
         slug: "bhutan"
     },
     {
-        name: "myanmar",
+        name: "Myanmar",
         population: 54750656,
         slug: "myanmar"
     },
     {
-        name: "camboya",
+        name: "Camboya",
         population: 16920520,
         slug: "cambodia"
     },
     {
-        name: "filipinas",
+        name: "Filipinas",
         population: 110878035,
         slug: "philippines"
     },
     {
-        name: "nueva zelanda",
+        name: "Nueva zelanda",
         population: 4843226,
         slug: "new-zealand"
     }
