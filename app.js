@@ -1,5 +1,5 @@
 import { getDataOfCountry, getPopulationOf } from './localData/accesToData.js'
-import { confirmed, recovered, deaths } from './components/Components.js'
+import { confirmed, recovered, deaths } from './components/components.js'
 import { separator } from './components/Separator.js'
 import { initEvents } from './Events.js'
 
