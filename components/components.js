@@ -31,7 +31,6 @@ const deaths =  (pobalcionTotal, numConfirmados, numMuertos, numRecuperados, fec
 
     let porcentageMuertes = ((numMuertos * 100) / pobalcionTotal).toFixed(2)
     return `\
-    \
     <article"> \
         <h3 style="font-size: 14px; color: #454545;"> <i class="fas fa-tombstone-alt"></i> Muertos por Covid</h3> \
         <p style="font-size: 12px; color: gray;"> <b>${ Intl.NumberFormat("es-MX").format(numMuertos) }</b> / ${Intl.NumberFormat("es-MX").format(pobalcionTotal)}</p> \

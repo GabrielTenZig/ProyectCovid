@@ -1,4 +1,4 @@
-export const barCharge = (porct) => {
+export const barCharge = (porcentage) => {
     const id = Math.random()
     const bar = 
     `<div class="bar"> \
@@ -11,7 +11,7 @@ export const barCharge = (porct) => {
         let i =  10000
         let current_porct = 100
 
-        while(i > porct*100) {
+        while(i > porcentage*100) {
             setTimeout( () => {
                 bar_loaded.style.width = current_porct + "%"
                 current_porct -= 0.01
