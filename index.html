@@ -8,15 +8,15 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
 
     <!-- ESTILOS GLOBALES -->
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/spinners.css">
+    <link rel="stylesheet" href="public/css/variables.css">
+    <link rel="stylesheet" href="public/css/spinners.css">
 
     <!-- ESTILOS PARA MOVIL-->
-    <link rel="stylesheet" href="css/mobile-styles/variables.css" media="(max-width: 800px)">
-    <link rel="stylesheet" href="css/index.css" media="(max-width: 800px)">
-    <link rel="stylesheet" href="css/mobile-styles/navigator.css" media="(max-width: 800px)">
-    <link rel="stylesheet" href="css/mobile-styles/dashboards.css" media="(max-width: 800px)">
-    <link rel="stylesheet" href="css/mobile-styles/components.css" media="(max-width: 800px)">
+    <link rel="stylesheet" href="public/css/mobile-styles/variables.css" media="(max-width: 900px)">
+    <link rel="stylesheet" href="public/css/index.css" media="(max-width: 900px)">
+    <link rel="stylesheet" href="public/css/mobile-styles/navigator.css" media="(max-width: 900px)">
+    <link rel="stylesheet" href="public/css/mobile-styles/dashboards.css" media="(max-width: 900px)">
+    <link rel="stylesheet" href="public/css/mobile-styles/components.css" media="(max-width: 900px)">
 
     <!-- ESTILOS PARA ESCRITORO -->
 
@@ -27,62 +27,89 @@
 </head>
 <body>
 
-    <ul class="opciones">
-        <li>
-            <button id="check-mexico">
-                <i class="fas fa-flag"></i>
-                Mexico
-            </button>
-        </li>
-        <li>
-            <button id="check-pais">
-                <i class="fas fa-globe-americas"></i>
-                Paises
-            </button>
-        </li>
-        <li>
-            <button id="check-global">
-                <i class="fas fa-globe"></i>
-                Global
-            </button>
-        </li>
-        <li>
-            <button id="check-about">
-                <i class="fas fa-info"></i>
-                Info.
-            </button>
-        </li>
-    </ul>
+    <header>
 
-    <!-- Dashboard Mexico -->
-    <div class="my-dashboard dashboard-mexico" id="dash-mexico">
-        <p>INFORMACION DE MÉXICO</p>
-    </div>
+        <nav>
+            <div class="topBar">
+                <picture>
+                    <img src="./public/img/isotipo.png" alt="Isotipo de la aplicacion CovidApp" width="40px" height="40px">
+                    <!-- !! Mover este CopyRight a la seccion de "info" -->
+                    <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+                </picture>
 
-    <!-- Dashboar Pais -->
-    <div class="my-dashboard dashboard-pais" id="dash-pais">
-        
-        <input class="dashboard-pais__input" type="text" name="v_pais-selected" id="v_pais-selected" placeholder="Busca un pais aquí">
-        
-        <p id="v_nombre-pais" class="title">Nombre del Pais</p>
+                <!-- <ul>
+                    <li>
+                        <button>A</button>
+                    </li>
+                    <li>
+                        <button>B</button>
+                    </li>
+                </ul> -->
+            </div>
 
-        <div class="dashboard-pais__informacion my-text-content" id="dashboard-pais__informacion">
-            <div class="loader" id="loader">Loading...</div>
+            <ul class="opciones">
+                <li>
+                    <button id="check-mexico">
+                        <i class="fas fa-flag"></i>
+                        Mexico
+                    </button>
+                </li>
+                <li>
+                    <button id="check-pais">
+                        <i class="fas fa-globe-americas"></i>
+                        Paises
+                    </button>
+                </li>
+                <li>
+                    <button id="check-global">
+                        <i class="fas fa-globe"></i>
+                        Global
+                    </button>
+                </li>
+                <li>
+                    <button id="check-about">
+                        <i class="fas fa-info"></i>
+                        Info.
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Dashboard Mexico -->
+        <div class="my-dashboard dashboard-mexico" id="dash-mexico">
+            <p>INFORMACION DE MÉXICO</p>
         </div>
-
-    </div>
-
     
-    <!-- Dashboard Global -->
-    <div class="my-dashboard dashboard-global" id="dash-global">
-        GLOBAL
-    </div>
+        <!-- Dashboar Pais -->
+        <div class="my-dashboard dashboard-pais" id="dash-pais">
+            
+            <input list="datalist_paises" class="dashboard-pais__input" name="v_pais-selected" id="v_pais-selected" placeholder="Busca un pais aquí">
+            <datalist id="datalist_paises">
+            </datalist>
+    
+            <p id="v_nombre-pais" class="title">Nombre del Pais</p>
+    
+            <div class="dashboard-pais__informacion my-text-content" id="dashboard-pais__informacion">
+                <div class="loader" id="loader">Loading...</div>
+            </div>
+    
+        </div>
+    
+        
+        <!-- Dashboard Global -->
+        <div class="my-dashboard dashboard-global" id="dash-global">
+            GLOBAL
+        </div>
+    
+    
+        <!-- Dashboard About -->
+        <div class="my-dashboard dashboard-about" id="dash-about">
+            INFORMACION DE LA APP
+        </div>
+    </main>
 
-
-    <!-- Dashboard About -->
-    <div class="my-dashboard dashboard-about" id="dash-about">
-        INFORMACION DE LA APP
-    </div>
     
     <script type="module" src="./app.js"></script>
 </body>

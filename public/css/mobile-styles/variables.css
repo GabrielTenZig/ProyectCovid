@@ -1,0 +1,6 @@
+:root {
+    --height-options-bar: 8vh;
+    --height-dashboard: calc(100% - var(--height-options-bar));
+
+    --button-option-color: #545454;
+}

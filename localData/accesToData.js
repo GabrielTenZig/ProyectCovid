@@ -1,7 +1,8 @@
 import { getBySlugLastRecord } from '../apis/apiCovid.js'
-import { contries } from './data.js'
+import { contries } from './Contries.js'
 
-export const getDataOfCountry = async (nameContry) => {
+
+const getDataOfCountry = async (nameContry) => {
     if(!nameContry) return undefined
     nameContry = nameContry.toLowerCase()
 
@@ -15,7 +16,6 @@ export const getDataOfCountry = async (nameContry) => {
     }
 
     if(coincidences.length == 0) {
-        // console.log("NO hay coincidencias")
         return {
             messageError: `No hay coincidencias con los datos de busqueda.<br><b style=";">Por favor, introduce un nombre de país valido y reintentalo.</b>`
         }
@@ -32,8 +32,7 @@ export const getDataOfCountry = async (nameContry) => {
     }
 }
 
-export const getPopulationOf = (nameCountry) => {
-    // console.log("Reciviendo name:: ", nameCountry)
+const getPopulationOf = (nameCountry) => {
     nameCountry = nameCountry.toLowerCase()
 
     for(let country of contries) {
@@ -44,3 +43,5 @@ export const getPopulationOf = (nameCountry) => {
     }
 
 }
+
+export { getDataOfCountry, getPopulationOf }

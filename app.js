@@ -1,67 +1,7 @@
 import { getDataOfCountry, getPopulationOf } from './localData/accesToData.js'
-import { confirmed, recovered, deaths, separator } from './components/components.js'
-
-
-// ### Selectores de botones del menu ###
-const butonMexico = document.getElementById('check-mexico')
-const butonPais = document.getElementById('check-pais')
-const butonGlobal = document.getElementById('check-global')
-const butonAbout = document.getElementById('check-about')
-
-// ### Selectores de los dashboards ###
-const dashboardMexico = document.getElementById('dash-mexico')
-const dashboardPais = document.getElementById('dash-pais')
-const dashboardGlobal = document.getElementById('dash-global')
-const dashboardAbout = document.getElementById('dash-about')
-
-
-dashboardPais.style.zIndex = '1'
-dashboardGlobal.style.zIndex = '4'
-dashboardAbout.style.zIndex = '2'
-dashboardMexico.style.zIndex = '3'
-
-dashboardMexico.style.left = '-100%'
-dashboardPais.style.left = '-100%'
-dashboardGlobal.style.left = '0%'
-dashboardAbout.style.left = '100%'
-
-
-// ### Eventos al presionar los botones del menu ###
-butonMexico.addEventListener('click', () => {
-
-    dashboardMexico.style.zIndex = '4'
-    dashboardPais.style.zIndex = '1'
-    dashboardGlobal.style.zIndex = '2'
-    dashboardAbout.style.zIndex = '3'
-
-    console.log("Listooo786oo")
-    dashboardMexico.style.left = '0%'
-    dashboardPais.style.left = '100%'
-    dashboardGlobal.style.left = '100%'
-    dashboardAbout.style.left = '100%'
-})
-
-butonPais.addEventListener('click', () => {
-    dashboardMexico.style.left = '-100%'
-    dashboardPais.style.left = '0%'
-    dashboardGlobal.style.left = '100%'
-    dashboardAbout.style.left = '100%'
-})
-
-butonGlobal.addEventListener('click', () => {
-    dashboardMexico.style.left = '-100%'
-    dashboardPais.style.left = '-100%'
-    dashboardGlobal.style.left = '0%'
-    dashboardAbout.style.left = '100%'
-})
-
-butonAbout.addEventListener('click', () => {
-    dashboardMexico.style.left = '-100%'
-    dashboardPais.style.left = '-100%'
-    dashboardGlobal.style.left = '-100%'
-    dashboardAbout.style.left = '0%'
-})
-
+import { confirmed, recovered, deaths } from './components/Components.js'
+import { separator } from './components/Separator.js'
+import { initEvents } from './Events.js'
 
 
 // #### Elementos dentro del Dashboard Pais ###
@@ -70,6 +10,8 @@ const dashboardCountryInformation = document.getElementById('dashboard-pais__inf
 const titleNombreDelPais = document.getElementById('v_nombre-pais')
 let loaderDashboardPais = document.getElementById('loader')
 // const loeaderHTML = document.getElementById('loader').outerHTML
+
+initEvents();
 
 loaderDashboardPais.style.display = 'none'
 
