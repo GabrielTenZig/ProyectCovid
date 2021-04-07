@@ -10,6 +10,7 @@ const confirmed =  (pobalcionTotal, numConfirmados, numMuertos, numRecuperados, 
         <p style="font-size: 12px; color: gray;"> <b>${ Intl.NumberFormat("es-MX").format(numConfirmados) }</b> / ${Intl.NumberFormat("es-MX").format(pobalcionTotal)}</p> \
         ${barCharge(porcentageConfirmados)}
         <p style="text-align: center;"> ${porcentageConfirmados} % </p> \
+        // Agregar Fecha de los datos
     </article>`
 }
 

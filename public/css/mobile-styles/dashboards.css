@@ -8,6 +8,8 @@
 
     box-sizing: border-box;
     position: fixed;
+    /* position: absolute; */
+    margin-top: var(--height-top-bar);
 
     transition: 0.4s;
     overflow: scroll;

@@ -16,7 +16,7 @@ nav {
     
     background-color: var(--backcolor);
     width: 100vw;
-    height: 3em;
+    height: var(--height-top-bar);
 
     display: flex;
     justify-content: space-between;
