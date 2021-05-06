@@ -1,3 +1,4 @@
+console.log("Trueeee")
 import { getDataOfCountry, getPopulationOf } from './localData/accesToData.js'
 import { confirmed, recovered, deaths } from './components/Components.js'
 import { separator } from './components/Separator.js'
@@ -16,6 +17,8 @@ const dataListPaises = document.getElementById('datalist_paises')
 // const loeaderHTML = document.getElementById('loader').outerHTML
 
 initEvents();
+console.log("Trueeee")
+
 
 // Agregamos los paises a la datalist
 contries.forEach((pais) => {
@@ -24,9 +27,22 @@ contries.forEach((pais) => {
 
 loaderDashboardPais.style.display = 'none'
 
-// BUSCANDO PAIS...
+
+searchBoxPais.addEventListener ('change', () => { 
+    showCountryData()    
+ });
 searchBoxPais.addEventListener('keydown', async (e) => {
     if (e.key != "Enter") return
+    showCountryData()
+})
+
+document.addEventListener( 'DOMContentLoaded', async () => {
+    console.log("DOM cargado completamnete")
+} )
+
+
+//////////////////  FUNCIONES   /////////////////////7
+const showCountryData = async () => {
     if (!searchBoxPais.value) return
 
     titleNombreDelPais.textContent = "Nombre del país"
@@ -61,10 +77,4 @@ searchBoxPais.addEventListener('keydown', async (e) => {
         dashboardCountryInformation.innerHTML += `<p>Datos actualizados al: ${fecha.getDate()} de ${months[fecha.getMonth()]} del ${fecha.getFullYear()}</p>`
     }
 
-
-})
-
-document.addEventListener( 'DOMContentLoaded', async () => {
-    console.log("DOM cargado completamnete")
-} )
-
+}
