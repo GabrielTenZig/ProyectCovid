@@ -1,7 +1,7 @@
 :root {
     
     /* DARK VERSION */
-    --backcolor: #333;
+    /* --backcolor: #333;
 
     --shadow-light: #4d4d4d;
     --shadow-dark: #1c1c1c;
@@ -9,33 +9,38 @@
     --font-title: Helvetica;
     --font-content: Helvetica;
 
-    --boxshadow-small: -4px -4px 9px var(--shadow-light), 4px 4px 9px var(--shadow-dark);
-
-
+    --boxshadow-small: -4px -4px 9px var(--shadow-light), 4px 4px 9px var(--shadow-dark); */
+    
+    
     /* LIGHT VERSION */
     --backcolor: #ececec;
     --second-backcolor: #cccccc;
-
+    
     --shadow-light: #ffffff;
     --shadow-dark: #cecece;
-
+    
     --color: #313131;
     --second-color: #4a4a4a;
-
-    --font-title: Helvetica;
-    --font-title-size: 1.7em;
-    --font-title-color: #515151;
-    --font-title-weight: bold;
     
-
+    --font-title: Helvetica;
+    --font-title-size: 1.5em;
+    --font-title-color: #515151;
+    --font-title-weight: bolder;
+    
+    --font-subtitle: Helvetica;
+    --font-subtitle-size: 1.2em;
+    --font-subtitle-color: #515151;
+    --font-subtitle-weight: bold;
+    
     --font-content: Helvetica;
     --font-content-size: 0.8em; 
     --font-content-color: #515151;
-    --font-content-weight: light;
-
+    --font-content-weight: normal;
+    
     --font-input: Corbel;
     
-
     --spinner-color: #333;
-
+    
+    --boxshadow-small: -4px -4px 9px var(--shadow-light), 4px 4px 9px var(--shadow-dark); */
+    
 }

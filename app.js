@@ -45,7 +45,7 @@ document.addEventListener( 'DOMContentLoaded', async () => {
 const showCountryData = async () => {
     if (!searchBoxPais.value) return
 
-    titleNombreDelPais.textContent = "Nombre del país"
+    titleNombreDelPais.textContent = ""
     dashboardCountryInformation.innerHTML = loaderDashboardPais.outerHTML
     loaderDashboardPais = document.getElementById('loader')
     loaderDashboardPais.style.display = 'block'
@@ -74,7 +74,7 @@ const showCountryData = async () => {
         
         console.log("Data: ", data)
         const fecha = new Date(data["Date"])
-        dashboardCountryInformation.innerHTML += `<p>Datos actualizados al: ${fecha.getDate()} de ${months[fecha.getMonth()]} del ${fecha.getFullYear()}</p>`
+        dashboardCountryInformation.innerHTML += `<time datetime="${fecha.getDate()}-${fecha.getMonth()}-${fecha.getFullYear()}">Datos actualizados al: ${fecha.getDate()+1} de ${months[fecha.getMonth()]} del ${fecha.getFullYear()}</time>`
     }
 
 }

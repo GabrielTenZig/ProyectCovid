@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0" />
+    
+    <meta name="description" content="CovidApp es una aplicacion web te ayuda a consultar datos estadisticos sobre la Covid-19 a nivel global, de un pais en particular e información sobre los estados unicamente de México." />
+    <meta name="author" content="Tenzig Dev" />
+    <meta name="keywords" content="Covid, Covid19, Covid-19, CovidApp, Aplicacion covid, datos covid, inofrmacion sobre covid, informacion covid" />
+    <link rel="shortcut icon" href="./public/img/isotipo_.png" type="image/x-icon">
+
+    <title>CovidApp by Tenzig</title>
+
 
     <!-- ANIMATE CSS -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
@@ -23,12 +31,10 @@
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-    <title>Dash Covid by Tenzig</title>
 </head>
 <body>
 
     <header>
-
         <nav>
             <div class="topBar">
                 <picture>
@@ -36,15 +42,6 @@
                     <!-- !! Mover este CopyRight a la seccion de "info" -->
                     <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
                 </picture>
-
-                <!-- <ul>
-                    <li>
-                        <button>A</button>
-                    </li>
-                    <li>
-                        <button>B</button>
-                    </li>
-                </ul> -->
             </div>
 
             <ul class="opciones">
@@ -78,38 +75,39 @@
 
     <main>
         <!-- Dashboard Mexico -->
-        <div class="my-dashboard dashboard-mexico" id="dash-mexico">
+        <section class="my-dashboard dashboard-mexico" id="dash-mexico">
             <p>INFORMACION DE MÉXICO</p>
-        </div>
+        </section>
     
         <!-- Dashboar Pais -->
-        <div class="my-dashboard dashboard-pais" id="dash-pais">
+        <section class="my-dashboard dashboard-pais" id="dash-pais">
+            <p class="title">Información por Paises</p>
             
             <input list="datalist_paises" class="dashboard-pais__input" name="v_pais-selected" id="v_pais-selected" placeholder="Busca un pais aquí">
             <datalist id="datalist_paises">
             </datalist>
-    
-            <p id="v_nombre-pais" class="title">Nombre del Pais</p>
-    
+
+            <p id="v_nombre-pais" class="title subtitle"></p>
+            
             <div class="dashboard-pais__informacion my-text-content" id="dashboard-pais__informacion">
                 <div class="loader-content">
                     <div class="loader" id="loader">Loading...</div>
                 </div>
             </div>
     
-        </div>
+        </section>
     
         
         <!-- Dashboard Global -->
-        <div class="my-dashboard dashboard-global" id="dash-global">
+        <section class="my-dashboard dashboard-global" id="dash-global">
             GLOBAL
-        </div>
+        </section>
     
     
         <!-- Dashboard About -->
-        <div class="my-dashboard dashboard-about" id="dash-about">
+        <section class="my-dashboard dashboard-about" id="dash-about">
             INFORMACION DE LA APP
-        </div>
+        </section>
     </main>
 
     
