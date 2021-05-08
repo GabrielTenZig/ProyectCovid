@@ -74,7 +74,7 @@ const showCountryData = async () => {
         
         console.log("Data: ", data)
         const fecha = new Date(data["Date"])
-        dashboardCountryInformation.innerHTML += `<time datetime="${fecha.getDate()}-${fecha.getMonth()}-${fecha.getFullYear()}">Datos actualizados al: ${fecha.getDate()+1} de ${months[fecha.getMonth()]} del ${fecha.getFullYear()}</time>`
+        dashboardCountryInformation.innerHTML += `<footer><time datetime="${fecha.getDate()}-${fecha.getMonth()}-${fecha.getFullYear()}">Datos actualizados al: ${fecha.getDate()+1} de ${months[fecha.getMonth()]} del ${fecha.getFullYear()}</time></footer>`
     }
 
 }
