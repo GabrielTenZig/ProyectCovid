@@ -23,19 +23,16 @@ export const initEvents = () => {
     dashboardGlobal.style.left = '0%'
     dashboardAbout.style.left = '100%'
 
+    butonGlobal.classList.add("option-button--selected")
+
     // EVENTOS
     butonMexico.addEventListener('click', () => {
-
-        dashboardMexico.style.zIndex = '4'
-        dashboardPais.style.zIndex = '1'
-        dashboardGlobal.style.zIndex = '2'
-        dashboardAbout.style.zIndex = '3'
-
-        console.log("Listooo786oo")
         dashboardMexico.style.left = '0%'
         dashboardPais.style.left = '100%'
         dashboardGlobal.style.left = '100%'
         dashboardAbout.style.left = '100%'
+
+        addSelectedButonClassTo(butonMexico, [butonMexico, butonPais, butonGlobal, butonAbout])
     })
 
     butonPais.addEventListener('click', () => {
@@ -43,6 +40,8 @@ export const initEvents = () => {
         dashboardPais.style.left = '0%'
         dashboardGlobal.style.left = '100%'
         dashboardAbout.style.left = '100%'
+
+        addSelectedButonClassTo(butonPais, [butonMexico, butonPais, butonGlobal, butonAbout])
     })
 
     butonGlobal.addEventListener('click', () => {
@@ -50,6 +49,8 @@ export const initEvents = () => {
         dashboardPais.style.left = '-100%'
         dashboardGlobal.style.left = '0%'
         dashboardAbout.style.left = '100%'
+
+        addSelectedButonClassTo(butonGlobal, [butonMexico, butonPais, butonGlobal, butonAbout])
     })
 
     butonAbout.addEventListener('click', () => {
@@ -57,5 +58,13 @@ export const initEvents = () => {
         dashboardPais.style.left = '-100%'
         dashboardGlobal.style.left = '-100%'
         dashboardAbout.style.left = '0%'
+
+        addSelectedButonClassTo(butonAbout, [butonMexico, butonPais, butonGlobal, butonAbout])
     })
+}
+
+const addSelectedButonClassTo = (butonElement, allButons) => {
+    allButons.map(elem => elem.classList.remove("option-button--selected"))
+
+    butonElement.classList.add("option-button--selected")
 }

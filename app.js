@@ -41,7 +41,7 @@ document.addEventListener( 'DOMContentLoaded', async () => {
 } )
 
 
-//////////////////  FUNCIONES   /////////////////////7
+//////////////////  FUNCIONES   /////////////////////
 const showCountryData = async () => {
     if (!searchBoxPais.value) return
 
@@ -63,18 +63,18 @@ const showCountryData = async () => {
 
     }  else {
         titleNombreDelPais.textContent = `${nameCountryInputedByUser}`
-        dashboardCountryInformation.innerHTML = `<p style="font-size:11px">Poblacion aproximada de ${nameCountryInputedByUser} durante la pandemia: <b style="font-size: 12px">${Intl.NumberFormat("es-MX").format(getPopulationOf(nameCountryInputedByUser))}</b></p>`
-        dashboardCountryInformation.innerHTML += separator()
+        dashboardCountryInformation.innerHTML = `<p class="element" style="font-size:11px">Poblacion aproximada de ${nameCountryInputedByUser} durante la pandemia: <b style="font-size: 12px">${Intl.NumberFormat("es-MX").format(getPopulationOf(nameCountryInputedByUser))}</b></p>`
+        // dashboardCountryInformation.innerHTML += separator()
         dashboardCountryInformation.innerHTML += confirmed(getPopulationOf(nameCountryInputedByUser),data["Confirmed"])
-        dashboardCountryInformation.innerHTML += separator()
+        // dashboardCountryInformation.innerHTML += separator()
         dashboardCountryInformation.innerHTML += recovered(getPopulationOf(nameCountryInputedByUser),data["Recovered"])
-        dashboardCountryInformation.innerHTML += separator()
+        // dashboardCountryInformation.innerHTML += separator()
         dashboardCountryInformation.innerHTML += deaths(getPopulationOf(nameCountryInputedByUser),data["Deaths"])
-        dashboardCountryInformation.innerHTML += separator()
+        // dashboardCountryInformation.innerHTML += separator()
         
         console.log("Data: ", data)
         const fecha = new Date(data["Date"])
-        dashboardCountryInformation.innerHTML += `<footer><time datetime="${fecha.getDate()}-${fecha.getMonth()}-${fecha.getFullYear()}">Datos actualizados al: ${fecha.getDate()+1} de ${months[fecha.getMonth()]} del ${fecha.getFullYear()}</time></footer>`
+        dashboardCountryInformation.innerHTML += `<footer class="element"><time datetime="${fecha.getDate()}-${fecha.getMonth()}-${fecha.getFullYear()}">Datos actualizados al: ${fecha.getDate()+1} de ${months[fecha.getMonth()]} del ${fecha.getFullYear()}</time></footer>`
     }
 
 }

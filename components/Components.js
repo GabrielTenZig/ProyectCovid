@@ -5,7 +5,7 @@ const confirmed =  (pobalcionTotal, numConfirmados) => {
 
     let porcentageConfirmados = ((numConfirmados * 100) / pobalcionTotal).toFixed(2)
     return `\
-    <article> \
+    <article class="element"> \
         <hgroup>
             <h3 style="font-size: 14px; color: #454545;"> <i class="fas fa-procedures"></i> Casos confirmados de Covid</h3> \
         </hgroup>
@@ -20,7 +20,7 @@ const recovered =  (pobalcionTotal, numRecuperados) => {
     let porcentageRecuperados = ((numRecuperados * 100) / pobalcionTotal).toFixed(2)
     return `\
     \
-    <article> \
+    <article class="element"> \
         <hgroup>
             <h3 style="font-size: 14px; color: #454545;"> <i class="fas fa-medkit"></i> Casos recuperados de Covid</h3> \
         </hgroup>
@@ -35,9 +35,9 @@ const deaths =  (pobalcionTotal, numMuertos) => {
 
     let porcentageMuertes = ((numMuertos * 100) / pobalcionTotal).toFixed(2)
     return `\
-    <article"> \
+    <article class="element"> \
         <hgroup>
-            <h3 style="font-size: 14px; color: #454545;"> <i class="fas fa-tombstone-alt"></i> Muertos por Covid</h3> \
+            <h3 style="font-size: 14px; color: #454545;"> <i class="fas fa-tombstone-alt"></i> Muertes por Covid</h3> \
         </hgroup>
         <p style="font-size: 12px; color: gray;"> <b>${ Intl.NumberFormat("es-MX").format(numMuertos) }</b> / ${Intl.NumberFormat("es-MX").format(pobalcionTotal)}</p> \
         ${barCharge(porcentageMuertes)}

@@ -1,0 +1,125 @@
+nav {
+    --backcolor: #3a3a3a;
+    --button-color: #444444;
+    
+    --backcolor: #336bca;
+    --button-color: #3f78da;
+
+    --backcolor-options: #cacaca;
+    --backcolor-selected-option: #3f78da;
+
+    --height-top-bar: 10vh;
+}
+
+/* BARRA NAVEGACION SUPERIOR */
+.topBar {
+    margin: 0;
+    padding: 0;
+    
+    z-index: 100;
+    /* position: fixed; */
+    
+    background-color: var(--backcolor);
+    width: 100vw;
+    height: var(--height-top-bar);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topBar > * {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.topBar > picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.topBar > ul {
+    padding: 0em;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+/* No hay botones implementados aun */
+.topBar > ul > li > button {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 100%;
+
+    outline: none;
+    border: none;
+
+    background-color: var(--button-color);
+    color: white;
+}
+
+
+/* BARRA NAVEGACION INFERIOR */
+.opciones {
+    background-color: var(--backcolor-options);
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+    width: 5vw;
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    z-index: 10;
+}
+
+.opciones > li {
+    list-style: none;
+    margin-top: 1em;
+    width: 100%;
+}
+
+.opciones > li > button {
+    /* border-radius: 100%; */
+    height: 4em;
+    width: 100%;
+    padding-top: 0.8em;
+    border: none;
+    outline: none;
+    color: white;
+    text-align: center;
+    font-size: 11px;
+    background-color: var(--backcolor-options);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.option-button--selected {
+    background: var(--backcolor-selected-option) !important;
+}
+
+.opciones > li > button > i {
+    font-size: 16px;
+}   
+
+
+/* EVENTOS DE LOS BOTONES */
+
+.topBar > ul > li > button:hover,
+.opciones > li > button:hover {
+    transform: scale(1.1);
+}
+
+.topBar > ul > li > button:active,
+.opciones > li > button:active {
+    filter: brightness(1.1);
+}

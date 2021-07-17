@@ -182,7 +182,7 @@ export const contries = [
     },
     {
         name: "España",
-        population: 100,
+        population: 47394223,
         slug: "spain"
     },
     {
